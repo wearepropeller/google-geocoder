@@ -75,6 +75,7 @@ class GoogleGeocoder {
             CURLOPT_URL                 => $this->requestUrl[$this->format].$this->param,
             CURLOPT_SSL_VERIFYPEER      => false,
             CURLOPT_FAILONERROR         => true,
+            CURLOPT_IPRESOLVE           => CURL_IPRESOLVE_V4,
         ));
 
         $request = curl_exec($curl);
